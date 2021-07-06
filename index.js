@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 
+const port = process.env.PORT || 8000;
+
 app.use("/", express.static("frontend"));
 
-app.listen(8000, () => {
-    console.log("Server is up!");
+app.listen(port, () => {
+    console.log(`App listening on port ${port}`);
 });
